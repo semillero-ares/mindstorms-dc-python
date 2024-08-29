@@ -16,7 +16,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semillero-ares.github.io/mindstorms-dc-python/EV3/1-instalacion-paquetes/</loc>
+         <loc>https://semillero-ares.github.io/mindstorms-dc-python/EV3/1-instalacion-paquetes-ubuntu/</loc>
+         <lastmod>2024-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://semillero-ares.github.io/mindstorms-dc-python/EV3/1-instalacion-paquetes-win/</loc>
          <lastmod>2024-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -36,7 +41,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://semillero-ares.github.io/mindstorms-dc-python/NXT/1-instalacion-paquetes/</loc>
+         <loc>https://semillero-ares.github.io/mindstorms-dc-python/NXT/1-instalacion-paquetes-ubuntu/</loc>
+         <lastmod>2024-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://semillero-ares.github.io/mindstorms-dc-python/NXT/1-instalacion-paquetes-win/</loc>
          <lastmod>2024-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -47,6 +57,11 @@
     </url>
     <url>
          <loc>https://semillero-ares.github.io/mindstorms-dc-python/NXT/3-bluetooth/</loc>
+         <lastmod>2024-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://semillero-ares.github.io/mindstorms-dc-python/NXT/4-ejemplo/</loc>
          <lastmod>2024-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>

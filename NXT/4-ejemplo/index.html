@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://semillero-ares.github.io/mindstorms-dc-python/NXT/4-ejemplo/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Ejemplo - Control de LEGO Mindstorms desde Python</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ejemplo";
+        var mkdocs_page_input_path = "NXT\\4-ejemplo.md";
+        var mkdocs_page_url = "/mindstorms-dc-python/NXT/4-ejemplo/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Control de LEGO Mindstorms desde Python
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" title="Escriba el término de búsqueda aquí" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegación">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Control de LEGO Mindstorms desde Python</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../ambiente-virtual/">Creación del ambiente virtual</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../siguiente/">Siguientes Pasos</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">EV3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/2-usb/">Conexión usando USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/3-bluetooth/">Conexión usando Bluetooth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/4-wi-fi/">Conexión usando Wi-Fi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">NXT</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2-usb/">Conexión usando USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../3-bluetooth/">Conexión usando Bluetooth</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Ejemplo</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Menú de navegación en móvil">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Control de LEGO Mindstorms desde Python</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Documentos"></a></li>
+          <li class="breadcrumb-item">NXT</li>
+      <li class="breadcrumb-item active">Ejemplo</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ejemplo">Ejemplo</h1>
+<p>En este ejemplo controlaremos dos motores con los valores de medida de un sensor de luz. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">bluetooth</span> <span class="k">as</span> <span class="nn">bluez</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">nxt.backend.bluetooth</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">nxt.locator</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">nxt.sensor</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span> <span class="nn">nxt.sensor.generic</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">brick</span> <span class="o">=</span> <span class="n">nxt</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">bluetooth</span><span class="o">.</span><span class="n">BluetoothSock</span><span class="p">(</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">bluetooth</span><span class="o">=</span><span class="n">bluez</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;00:16:53:1A:A8:B3&#39;</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">with</span> <span class="n">brick</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">b</span><span class="p">:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="c1"># Conectar el motor al puerto B</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">motorDerecha</span>   <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">get_motor</span><span class="p">(</span><span class="n">nxt</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">Port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="c1"># Conectar el motor al puerto C</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">motorIzquierda</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">get_motor</span><span class="p">(</span><span class="n">nxt</span><span class="o">.</span><span class="n">motor</span><span class="o">.</span><span class="n">Port</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="c1"># Conectar el sensor de Luz al puerto 2</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">sensorLuz</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">get_sensor</span><span class="p">(</span><span class="n">nxt</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">Port</span><span class="o">.</span><span class="n">S2</span><span class="p">,</span> <span class="n">nxt</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">generic</span><span class="o">.</span><span class="n">Light</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Presiona Ctrl-C para interrumpir el programa&quot;</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="c1"># Tomar la medida del sensor de Luz</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="n">medida</span> <span class="o">=</span> <span class="n">sensorLuz</span><span class="o">.</span><span class="n">get_sample</span><span class="p">()</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">medida</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="c1"># Calcular una accion dependiendo del valor de la Luz</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="n">accion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">500</span><span class="o">-</span><span class="n">medida</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        <span class="c1"># Enviar acciones a cada motor</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="n">motorDerecha</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">accion</span><span class="p">,</span> <span class="n">regulated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="n">motorIzquierda</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">accion</span><span class="p">,</span> <span class="n">regulated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        <span class="c1"># Esperar 0.2 segundos</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+</span></code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
+        <a href="../3-bluetooth/" class="btn btn-neutral float-left" title="Conexión usando Bluetooth"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Creado por <a href="https://github.com/davinsony">Davinson Castaño-Cano</a>.
+</p>
+  </div>
+
+  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versiones">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../3-bluetooth/" style="color: #fcfcfc">&laquo; Anterior</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

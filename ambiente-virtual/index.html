@@ -55,7 +55,9 @@
               </ul>
               <p class="caption"><span class="caption-text">EV3</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../EV3/1-instalacion-paquetes/">Instalación de los paquetes</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../EV3/1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../EV3/1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../EV3/2-usb/">Conexión usando USB</a>
                   </li>
@@ -66,11 +68,15 @@
               </ul>
               <p class="caption"><span class="caption-text">NXT</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../NXT/1-instalacion-paquetes/">Instalación de los paquetes</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../NXT/1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../NXT/1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../NXT/2-usb/">Conexión usando USB</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../NXT/3-bluetooth/">Conexión usando Bluetooth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../NXT/4-ejemplo/">Ejemplo</a>
                   </li>
               </ul>
       </div>
@@ -131,8 +137,21 @@
 <li>
 <p>Activar el ambiente virtual</p>
 <p>Cada vez que vayamos a utilizar nuestro programa de python para controlar el LEGO, deberemos activar el ambiente virtual. Para esto, estando en la misma carpeta de donde creamos el ambiente virtual, en el terminal escribiremos:</p>
+<ul>
+<li>
+<p>Para <strong>Windows</strong>:</p>
 <div class="language-bat highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.\LEGO\Scripts\activate
 </span></code></pre></div>
+<p>En caso de que se presente un error en la activación siguiendo <a href="https:/go.microsoft.com/fwlink/?LinkID=135170">las instrucción del sitio de Microsoft</a>, podremos escribiendo en el terminal esto, activar el ambiente virtual:</p>
+<div class="language-bat highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+</span></code></pre></div>
+</li>
+<li>
+<p>Para <strong>Ubuntu</strong>:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">source</span><span class="w"> </span>LEGO/Scripts/activate
+</span></code></pre></div>
+</li>
+</ul>
 <p>Así aparecera la palabra LEGO al inicio del la línea en el Terminal y tendremos activado el ambiente virtual. </p>
 </li>
 </ol>

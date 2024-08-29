@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://semillero-ares.github.io/mindstorms-dc-python/NXT/1-instalacion-paquetes/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://semillero-ares.github.io/mindstorms-dc-python/EV3/1-instalacion-paquetes-win/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Instalación de los paquetes - Control de LEGO Mindstorms desde Python</title>
+    <title>Instalación de paquetes en Windows - Control de LEGO Mindstorms desde Python</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Instalaci\u00f3n de los paquetes";
-        var mkdocs_page_input_path = "NXT\\1-instalacion-paquetes.md";
-        var mkdocs_page_url = "/mindstorms-dc-python/NXT/1-instalacion-paquetes/";
+        var mkdocs_page_name = "Instalaci\u00f3n de paquetes en Windows";
+        var mkdocs_page_input_path = "EV3\\1-instalacion-paquetes-win.md";
+        var mkdocs_page_url = "/mindstorms-dc-python/EV3/1-instalacion-paquetes-win/";
       </script>
     
     <!--[if lt IE 9]>
@@ -52,25 +52,31 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">EV3</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/1-instalacion-paquetes/">Instalación de los paquetes</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/2-usb/">Conexión usando USB</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/3-bluetooth/">Conexión usando Bluetooth</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/4-wi-fi/">Conexión usando Wi-Fi</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">NXT</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Instalación de los paquetes</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Instalación de paquetes en Windows</a>
     <ul class="current">
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../2-usb/">Conexión usando USB</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3-bluetooth/">Conexión usando Bluetooth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4-wi-fi/">Conexión usando Wi-Fi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">NXT</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/2-usb/">Conexión usando USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/3-bluetooth/">Conexión usando Bluetooth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/4-ejemplo/">Ejemplo</a>
                   </li>
               </ul>
       </div>
@@ -87,8 +93,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Documentos"></a></li>
-          <li class="breadcrumb-item">NXT</li>
-      <li class="breadcrumb-item active">Instalación de los paquetes</li>
+          <li class="breadcrumb-item">EV3</li>
+      <li class="breadcrumb-item active">Instalación de paquetes en Windows</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -97,9 +103,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="instalacion-de-los-paquetes">Instalación de los paquetes</h1>
+                <h1 id="instalacion-de-paquetes-en-windows">Instalación de paquetes en Windows</h1>
 <p>Para instalar los paquetes vamos a activar el ambiente virtual, y una vez activado vamos a escribir en un terminal.</p>
-<div class="language-bat highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install nxt-python    
+<div class="language-bat highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install ev3-dc      
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip install git+https://github.com/pybluez/pybluez.git#egg=pybluez
 </span></code></pre></div>
 <p>En caso de que se presente un error con la instalación de PyBluez, podremos usar el <em>wheel</em>, este archivo de instalación debe estar en concordancia con la versión de Python, el sistema Operativo y el procesador.</p>
@@ -108,14 +114,14 @@
 <ul>
 <li><a href="../../dist/PyBluez-0.30-cp311-cp311-win_amd64.whl">Python 3.11 | Window | AMD64 ~ PyBluez-0.30-cp311-cp311-win_amd64.whl</a></li>
 </ul>
-<p>Con esto ya tendremos todo lo necesarios para controlar nuestro LEGO <strong>NXT</strong> desde un PC usando Python. Si se presenta algún error con la instalación hacer la instalación usando el archivo <a href="../requirements.txt"><code>requirements.txt</code></a>. Con el archivo descargado escribiremos en el terminal:</p>
+<p>Con esto ya tendremos todo lo necesarios para controlar nuestro LEGO <strong>EV3</strong> desde un PC usando Python. Si se presenta algún error con la instalación hacer la instalación usando el archivo <a href="../requirements.txt"><code>requirements.txt</code></a>. Con el archivo descargado escribiremos en el terminal:</p>
 <div class="language-bat highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install -r requirements.txt
 </span></code></pre></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
-        <a href="../../EV3/4-wi-fi/" class="btn btn-neutral float-left" title="Conexión usando Wi-Fi"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href="../1-instalacion-paquetes-ubuntu/" class="btn btn-neutral float-left" title="Instalación de paquetes en Ubuntu"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
         <a href="../2-usb/" class="btn btn-neutral float-right" title="Conexión usando USB">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -141,7 +147,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../EV3/4-wi-fi/" style="color: #fcfcfc">&laquo; Anterior</a></span>
+      <span><a href="../1-instalacion-paquetes-ubuntu/" style="color: #fcfcfc">&laquo; Anterior</a></span>
     
     
       <span><a href="../2-usb/" style="color: #fcfcfc">Siguiente &raquo;</a></span>

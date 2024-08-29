@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://semillero-ares.github.io/mindstorms-dc-python/EV3/4-wi-fi/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://semillero-ares.github.io/mindstorms-dc-python/NXT/1-instalacion-paquetes-ubuntu/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Conexión usando Wi-Fi - Control de LEGO Mindstorms desde Python</title>
+    <title>Instalación de paquetes en Ubuntu - Control de LEGO Mindstorms desde Python</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Conexi\u00f3n usando Wi-Fi";
-        var mkdocs_page_input_path = "EV3\\4-wi-fi.md";
-        var mkdocs_page_url = "/mindstorms-dc-python/EV3/4-wi-fi/";
+        var mkdocs_page_name = "Instalaci\u00f3n de paquetes en Ubuntu";
+        var mkdocs_page_input_path = "NXT\\1-instalacion-paquetes-ubuntu.md";
+        var mkdocs_page_url = "/mindstorms-dc-python/NXT/1-instalacion-paquetes-ubuntu/";
       </script>
     
     <!--[if lt IE 9]>
@@ -52,8 +52,23 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">EV3</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/2-usb/">Conexión usando USB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/3-bluetooth/">Conexión usando Bluetooth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../EV3/4-wi-fi/">Conexión usando Wi-Fi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">NXT</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Instalación de paquetes en Ubuntu</a>
+    <ul class="current">
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
                   </li>
@@ -61,22 +76,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../3-bluetooth/">Conexión usando Bluetooth</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Conexión usando Wi-Fi</a>
-    <ul class="current">
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">NXT</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/1-instalacion-paquetes-ubuntu/">Instalación de paquetes en Ubuntu</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/2-usb/">Conexión usando USB</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/3-bluetooth/">Conexión usando Bluetooth</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../NXT/4-ejemplo/">Ejemplo</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../4-ejemplo/">Ejemplo</a>
                   </li>
               </ul>
       </div>
@@ -93,8 +93,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Documentos"></a></li>
-          <li class="breadcrumb-item">EV3</li>
-      <li class="breadcrumb-item active">Conexión usando Wi-Fi</li>
+          <li class="breadcrumb-item">NXT</li>
+      <li class="breadcrumb-item active">Instalación de paquetes en Ubuntu</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -103,15 +103,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="conexion-usando-wi-fi">Conexión usando Wi-Fi</h1>
-<p>Solamente el LEGO MindStorms EV3 soporta la conexión Wi-Fi utilizando un [dongle Wi-Fi][WIFI] en el puerto USB tipo A que tiene este LEGO. </p>
-<p>En este momento no tengo el dongle para hacer las pruebas, pero pueden seguir los pasos de <a href="https://ev3-dc.readthedocs.io/en/latest/ejemplos_ev3.html#wifi">aquí</a></p>
+                <h1 id="instalacion-de-paquetes-en-ubuntu">Instalación de paquetes en Ubuntu</h1>
+<p>Para instalar los paquetes en ubuntu deberemos a activar el ambiente virtual, e instalar los siguentes componentes</p>
+<ul>
+<li>
+<p>Instalar libbluetooth</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libbluetooth-dev
+</span></code></pre></div>
+</li>
+<li>
+<p>Luego, instalar las siguientes librerias de python</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>nxt-python<span class="w">    </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/pybluez/pybluez.git#egg<span class="o">=</span>pybluez
+</span></code></pre></div>
+</li>
+</ul>
+<p>Con esto ya tendremos todo lo necesarios para controlar nuestro LEGO <strong>NXT</strong> desde un PC usando Python. Si se presenta algún error con la instalación hacer la instalación usando el archivo <a href="../requirements.txt"><code>requirements.txt</code></a>. Con el archivo descargado escribiremos en el terminal:</p>
+<div class="language-bat highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install -r requirements.txt
+</span></code></pre></div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Navegación de pie de página">
-        <a href="../3-bluetooth/" class="btn btn-neutral float-left" title="Conexión usando Bluetooth"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
-        <a href="../../NXT/1-instalacion-paquetes-ubuntu/" class="btn btn-neutral float-right" title="Instalación de paquetes en Ubuntu">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../EV3/4-wi-fi/" class="btn btn-neutral float-left" title="Conexión usando Wi-Fi"><span class="icon icon-circle-arrow-left"></span> Anterior</a>
+        <a href="../1-instalacion-paquetes-win/" class="btn btn-neutral float-right" title="Instalación de paquetes en Windows">Siguiente <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -136,10 +151,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../3-bluetooth/" style="color: #fcfcfc">&laquo; Anterior</a></span>
+      <span><a href="../../EV3/4-wi-fi/" style="color: #fcfcfc">&laquo; Anterior</a></span>
     
     
-      <span><a href="../../NXT/1-instalacion-paquetes-ubuntu/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
+      <span><a href="../1-instalacion-paquetes-win/" style="color: #fcfcfc">Siguiente &raquo;</a></span>
     
   </span>
 </div>
