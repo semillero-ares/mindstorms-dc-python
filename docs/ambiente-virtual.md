@@ -40,8 +40,23 @@ Para la configuración del ambiente virtual usaremos el paquete `virtualenv` y s
 
     Cada vez que vayamos a utilizar nuestro programa de python para controlar el LEGO, deberemos activar el ambiente virtual. Para esto, estando en la misma carpeta de donde creamos el ambiente virtual, en el terminal escribiremos:
 
-    ```bat
-    .\LEGO\Scripts\activate
-    ```
+    - Para **Windows**:
+
+        ```bat
+        .\LEGO\Scripts\activate
+        ```
+
+        En caso de que se presente un error en la activación siguiendo [las instrucción del sitio de Microsoft](https:/go.microsoft.com/fwlink/?LinkID=135170), podremos escribiendo en el terminal esto, activar el ambiente virtual:
+
+        ```bat
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+        ```
+
+
+    - Para **Ubuntu**:
+
+        ```sh
+        source LEGO/Scripts/activate
+        ```
 
     Así aparecera la palabra LEGO al inicio del la línea en el Terminal y tendremos activado el ambiente virtual. 

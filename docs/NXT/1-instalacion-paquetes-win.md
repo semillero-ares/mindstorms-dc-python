@@ -1,4 +1,4 @@
-# Instalación de los paquetes
+# Instalación de paquetes en Windows
 
 Para instalar los paquetes vamos a activar el ambiente virtual, y una vez activado vamos a escribir en un terminal.
 
