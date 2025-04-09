@@ -59,7 +59,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../2-usb/">Conexión usando USB</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Conexión usando Bluetooth</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Conexión usando Bluetooth</a>
     <ul class="current">
     </ul>
                   </li>
@@ -120,7 +120,7 @@
 <p>Verificar que el PC ve el LEGO.</p>
 <p>Para esto usaremos el código de Python que pueden descargar <a href="../../ejemplos/pybluez-inquiry-example.py">aquí</a></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Simple inquiry example</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">bluetooth</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">bluetooth</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">nearby_devices</span> <span class="o">=</span> <span class="n">bluetooth</span><span class="o">.</span><span class="n">discover_devices</span><span class="p">(</span><span class="n">lookup_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Found </span><span class="si">{}</span><span class="s2"> devices.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nearby_devices</span><span class="p">)))</span>
@@ -136,7 +136,7 @@
 <li>
 <p>Probemos un codigo para mover un motor conectador en el Puerto A:</p>
 <p>El código de prueba lo podemos descargar de <a href="../ejemplos/ev3-bt--move-motor-a.py">aquí</a>, que es igual al mostrado a continuación, <strong>Debemos cambiar la dirección MAC</strong> del LEGO por la correcta.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">ev3_dc</span> <span class="k">as</span> <span class="nn">ev3</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">ev3_dc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ev3</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">with</span> <span class="n">ev3</span><span class="o">.</span><span class="n">EV3</span><span class="p">(</span><span class="n">protocol</span><span class="o">=</span><span class="n">ev3</span><span class="o">.</span><span class="n">BLUETOOTH</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;00:16:53:50:8A:86&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">brick</span><span class="p">:</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="c1"># Conectar el motor en el Puerto A</span>
@@ -171,7 +171,7 @@
 </p>
   </div>
 
-  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
+  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando un <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
           
         </div>

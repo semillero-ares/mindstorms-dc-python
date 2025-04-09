@@ -57,7 +57,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../1-instalacion-paquetes-win/">Instalación de paquetes en Windows</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Conexión usando USB</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Conexión usando USB</a>
     <ul class="current">
     </ul>
                   </li>
@@ -117,7 +117,7 @@
 <li>
 <p>Verificar la conexión del LEGO EV3:</p>
 <p>Para la verificación usaremos el siguiente <a href="../ejemplos/ev3-usb--test.py">código</a>, recordemos activar el ambiente virtual.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">ev3_dc</span> <span class="k">as</span> <span class="nn">ev3</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">ev3_dc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ev3</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">with</span> <span class="n">ev3</span><span class="o">.</span><span class="n">EV3</span><span class="p">(</span><span class="n">protocol</span><span class="o">=</span><span class="n">ev3</span><span class="o">.</span><span class="n">USB</span><span class="p">)</span> <span class="k">as</span> <span class="n">my_robot</span><span class="p">:</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">my_robot</span><span class="p">)</span>
@@ -127,7 +127,7 @@
 <li>
 <p>Probemos un codigo para mover un motor conectador en el Puerto A:</p>
 <p>El código de prueba lo podemos descargar de <a href="../ejemplos/ev3-usb--move-motor-a.py">aquí</a>, que es igual al mostrado a continuación, Debemos cambiar la dirección MAC del LEGO por la correcta.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">ev3_dc</span> <span class="k">as</span> <span class="nn">ev3</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">ev3_dc</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ev3</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">with</span> <span class="n">ev3</span><span class="o">.</span><span class="n">EV3</span><span class="p">(</span><span class="n">protocol</span><span class="o">=</span><span class="n">ev3</span><span class="o">.</span><span class="n">USB</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;00:16:53:50:8A:86&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">brick</span><span class="p">:</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">brick</span><span class="p">)</span>
@@ -163,7 +163,7 @@
 </p>
   </div>
 
-  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
+  Construído con <a href="https://www.mkdocs.org/">MkDocs</a> usando un <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a> provisto por <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
           
         </div>
