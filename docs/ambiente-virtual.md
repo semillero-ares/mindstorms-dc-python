@@ -34,7 +34,9 @@ Para la configuración del ambiente virtual usaremos el paquete `virtualenv` y s
     python -m virtualenv -p python3.11 LEGO
     ```
 
-    En la creación de este ambiente estoy declarando la versión de python que voy a usar, esto es necesario para usar el bluetooth, ya que a día de hoy (2024-08-26) el paquete `pybluez` no soporta python 3.12.
+    En la creación de este ambiente estoy declarando la versión de python que voy a usar, esto es necesario para usar el bluetooth, ya que a día de hoy (2025-04-09) el paquete `pybluez` no soporta python 3.12.
+
+    Si **Ocurre un error** ejectuando el comando anterior probablemente es por que no se tiene `python3.11` instalado para hacerlo usar el Microsoft Store e instalar [Python 3.11](https://apps.microsoft.com/detail/9NRWMJP3717K)
 
 4. Activar el ambiente virtual
 

@@ -51,12 +51,15 @@ Para usar la conexión por bluetooth, debemos realizar las siguientes tareas:
         # Conectar el motor en el Puerto A
         my_motor = b.get_motor(nxt.motor.Port.A)
         print("Presiona Ctrl-C para interrumpir el programa")
-        while True:
-            # Hará una rotación completa en una dirección
-            my_motor.turn(25, 360)
-            # Hará una rotación completa en la otra dirección
-            my_motor.turn(-25, 360)
-
+        try:
+            while True:
+                # Hará una rotación completa en una dirección
+                my_motor.turn(25, 360)
+                # Hará una rotación completa en la otra dirección
+                my_motor.turn(-25, 360)
+        except KeyboardInterrupt:
+            print("\nInterrupción detectada. Deteniendo motores...")
+            my_motor.brake()
     ```
 
 Para más información de las funciones que se pueden usar consultar la [**documentación**](https://ni.srht.site/nxt-python/latest/api/index.html).
