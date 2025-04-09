@@ -15,6 +15,8 @@ Para instalar los paquetes en ubuntu deberemos a activar el ambiente virtual, e 
     pip install git+https://github.com/pybluez/pybluez.git#egg=pybluez
     ```
 
+Visitar el siguiente enlace para [la documentación de la libreria nxt-python](https://ni.srht.site/nxt-python/latest/index.html)
+
 Con esto ya tendremos todo lo necesarios para controlar nuestro LEGO **NXT** desde un PC usando Python. Si se presenta algún error con la instalación hacer la instalación usando el archivo [`requirements.txt`](./requirements.txt). Con el archivo descargado escribiremos en el terminal:
 
 ```bat

@@ -7,6 +7,8 @@ pip install nxt-python
 pip install git+https://github.com/pybluez/pybluez.git#egg=pybluez
 ```
 
+Visitar el siguiente enlace para [la documentación de la libreria nxt-python](https://ni.srht.site/nxt-python/latest/index.html)
+
 En caso de que se presente un error con la instalación de PyBluez, podremos usar el _wheel_, este archivo de instalación debe estar en concordancia con la versión de Python, el sistema Operativo y el procesador.
 
 ```bat
